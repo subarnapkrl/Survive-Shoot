@@ -53,12 +53,15 @@ public class EnemyBehaviour : MonoBehaviour
         if(other.gameObject.tag=="Bullet")
         {
             StartCoroutine(Damaged());
+            
             enemyHealth-=40f;
             if(enemyHealth<=0f)
             {
                 Destroy(gameObject);
+                KillManager.instance.AddPoints();
             }
             Destroy(other.gameObject);
+            
         }else if(other.gameObject.tag=="Player")
         {
             gameManagerr.gameOver=true;
@@ -71,5 +74,6 @@ public class EnemyBehaviour : MonoBehaviour
         disableEnemy=true;
         yield return new WaitForSeconds(0.5f);
         disableEnemy=false;
+        
     }
 }

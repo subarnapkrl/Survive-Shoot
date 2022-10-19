@@ -8,8 +8,8 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField] GameObject[] spawnPoints;
     [SerializeField] GameObject enemy;
 
-    float spawnTimer=3f;
-    float spawnRateIncrease=4f;
+    float spawnTimer=2f;
+    float spawnRateIncrease=5f;
 
     // Start is called before the first frame update
     void Start()
