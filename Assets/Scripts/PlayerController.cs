@@ -47,6 +47,11 @@ public class PlayerController : MonoBehaviour
         {
             isShooting=true;
         }
+
+        transform.position=new Vector2(
+            Mathf.Clamp(transform.position.x,-15.0f,15.0f),
+            Mathf.Clamp(transform.position.y,-10.5f,12.0f)
+        );
     }
 
     void FixedUpdate() 
